@@ -81,7 +81,6 @@
 \addtolength \evensidemargin {  55pt }
 
 %% 日本語用設定
-\RequirePackage { pxjahyper }
 \DeclareTextFontCommand { \emph } { \sffamily\gtfamily }
 
 % 目次（jsarticle の設定を復帰）
