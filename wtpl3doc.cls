@@ -107,17 +107,6 @@
     \@dottedtocline{2}{\@tempdima}{3zw}
   }
 
-%% ゴースト保護
-\RequirePackage [ verb ] { bxghost }
-\DeclareDocumentCommand { \code } { m }
-  { \eghostguarded { \texttt {#1} } }
-\cs_new_eq:NN \__wtpl_enquote:n \enquote
-\DeclareDocumentCommand { \enquote } { m }
-  { \eghostguarded { \__wtpl_enquote:n {#1} } }
-\cs_new_eq:NN \__wtpl_codedoc_cmd:nn \__codedoc_cmd:nn
-\cs_set_protected:Npn \__codedoc_cmd:nn #1#2
-  { \eghostguarded { \__wtpl_codedoc_cmd:nn {#1} {#2} } }
-
 %% 枠
 \cs_new_eq:NN \__wtpl_codedoc_function_end: \__codedoc_function_end:
 \DeclareTColorBox { texnote } {}
